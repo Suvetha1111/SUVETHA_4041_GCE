@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div  style="display: flex; flex-direction: column; height: 80vh; justify-content: center; align-items: center;">
+<div class="card text-center">
+    <div class="card-body" style="background-color: #f8f9fa; width: 850px; border-radius: 10px; padding: 20px;">
+        <h1>Welcome To VoteVista !!</h1>
+        <p style="font-size: 18px;">Cast your vote and make your voice heard in shaping the future of our community. Explore the latest polls on trending tech topics, share your insights, and engage with fellow developers.</p>
+
+        <a class="btn btn-primary" href="{% url 'polls:index' %}" style="margin-top: 15px;">View Available Polls</a>
+    </div>
+</div>
+</div>
+{% endblock %}

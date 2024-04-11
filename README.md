@@ -1,88 +1,105 @@
 Voting Web Application using Django Framework
 
-Introduction
+## Introduction
+
 votevista is a web application built using Django framework. It facilitates conducting polls consisting of questions and choices, allowing users to vote for their preferred choices. The application also provides result visualization for users to track the total votes for specific questions.
 
-Implementation
-Creating the Project
-Setting Up the Environment:
+## Implementation
 
-Create an empty folder named votevista_project.
-Set up a virtual environment using pipenv.
-Install Django within the virtual environment.
-Initializing Django Project:
+### Creating the Project
 
-Create a Django project named votevista.
-Create an app named polls within the project.
-Creating Models
-Define Models:
+1. **Setting Up the Environment:**
+   - Create an empty folder named `votevista_project`.
+   - Set up a virtual environment using `pipenv`.
+   - Install Django within the virtual environment.
 
-Define two models, Question and Choice, in the models.py file.
-Question contains fields for question text and publication date.
-Choice contains fields for choice text, votes, and a foreign key relationship with Question.
-Register Apps:
+2. **Initializing Django Project:**
+   - Create a Django project named `votevista`.
+   - Create an app named `polls` within the project.
 
-Include the polls app in the INSTALLED_APPS list in settings.py.
-Migrations and Database Setup:
+### Creating Models
 
-Generate and apply migrations to create database tables for models.
-Creating Admin Interface
-Create Superuser:
+1. **Define Models:**
+   - Define two models, `Question` and `Choice`, in the `models.py` file.
+   - `Question` contains fields for question text and publication date.
+   - `Choice` contains fields for choice text, votes, and a foreign key relationship with `Question`.
 
-Create a superuser to access the admin panel.
-Customize Admin Interface:
+2. **Register Apps:**
+   - Include the `polls` app in the `INSTALLED_APPS` list in `settings.py`.
 
-Customize admin site header, title, and index title.
-Register models and inline choices for administration.
-Creating Views
-Define Views:
+3. **Migrations and Database Setup:**
+   - Generate and apply migrations to create database tables for models.
 
-Implement views for displaying questions, voting, viewing details, and displaying results.
-Utilize Django's built-in render function for rendering templates.
-Define URLs:
+### Creating Admin Interface
 
-Define URL patterns for views in the urls.py file within the polls app.
-Creating Templates
-Frontend Layout:
+1. **Create Superuser:**
+   - Create a superuser to access the admin panel.
 
-Create base HTML layout including navigation bar.
-Create templates for index, detail, and results pages.
-Configure Template Path:
+2. **Customize Admin Interface:**
+   - Customize admin site header, title, and index title.
+   - Register models and inline choices for administration.
 
-Configure the template directory path in Django settings.
-Creating Landing Page
-Create Pages App:
+### Creating Views
 
-Create a separate app named pages for the landing page.
-Define Landing Page View and Template:
+1. **Define Views:**
+   - Implement views for displaying questions, voting, viewing details, and displaying results.
+   - Utilize Django's built-in `render` function for rendering templates.
 
-Implement a view to render the landing page.
-Create an HTML template for the landing page.
-Main URLs Configuration
-Configure URLs:
-Define URL patterns for both polls and pages apps in the main urls.py.
-Testing
-Admin Frontend
-Admin Login:
+2. **Define URLs:**
+   - Define URL patterns for views in the `urls.py` file within the `polls` app.
 
-Access the admin panel using the provided URL.
-Log in using superuser credentials.
-Add Questions:
+### Creating Templates
 
-Add questions and choices via the admin interface.
-User Frontend
-Access Landing Page:
+1. **Frontend Layout:**
+   - Create base HTML layout including navigation bar.
+   - Create templates for index, detail, and results pages.
 
-Visit the landing page of the application.
-Navigate to available polls.
-Voting Process:
+2. **Configure Template Path:**
+   - Configure the template directory path in Django settings.
 
-Select a question and vote for a choice.
-View the voting results.
-Future Scope
+### Creating Landing Page
+
+1. **Create Pages App:**
+   - Create a separate app named `pages` for the landing page.
+
+2. **Define Landing Page View and Template:**
+   - Implement a view to render the landing page.
+   - Create an HTML template for the landing page.
+
+### Main URLs Configuration
+
+1. **Configure URLs:**
+   - Define URL patterns for both `polls` and `pages` apps in the main `urls.py`.
+
+## Testing
+
+### Admin Frontend
+
+1. **Admin Login:**
+   - Access the admin panel using the provided URL.
+   - Log in using superuser credentials.
+
+2. **Add Questions:**
+   - Add questions and choices via the admin interface.
+
+### User Frontend
+
+1. **Access Landing Page:**
+   - Visit the landing page of the application.
+   - Navigate to available polls.
+
+2. **Voting Process:**
+   - Select a question and vote for a choice.
+   - View the voting results.
+
+## Future Scope
+
 This project can serve as a foundation for implementing online voting systems in various domains. Future enhancements could include additional features based on specific requirements, such as user authentication, result analysis, and sharing options.
 
-Quick Start
+---
+
+## Quick Start
+``` bash
 # Install dependencies
 pip install pipenv
 
@@ -93,3 +110,4 @@ pipenv install django
 cd votevista
 # Serve on localhost:8000
 python manage.py runserver
+```
